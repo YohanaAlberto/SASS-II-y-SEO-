@@ -1,0 +1,68 @@
+@import "variables";
+@import "fuente";
+@import "generales";
+@import "navbar";
+@import "maps";
+@import "footer";
+
+
+body {
+    font-family: 'Roboto Slab', serif; 
+    font-size: $tam-fuente;
+}
+
+h1{
+    margin-left: 3%;
+}
+
+.imgCarousel {
+    width: 900px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-body {
+    height: 55rem;
+}
+
+.contenedorTabla{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.tabla{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-thumbnail{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.pilatesBeneficios {
+    border: 1px solid rgb(72, 242, 177);
+    background-color: rgba(167, 233, 212, 0.5);
+}
+
+.card{
+    @extend .pilatesBeneficios;
+}
+
+@mixin sizes ($width, $height){
+    height: $height;
+    width: $width;
+}
+
+article {
+    @include sizes (600px, 500px);
+}

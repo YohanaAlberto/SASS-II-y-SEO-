@@ -1,0 +1,30 @@
+/* MAPS */
+
+$mRedes:(facebook:rgb(51, 0, 255), instagram:rgb(255, 0, 247));
+
+@each $redesSociales, $color in $mRedes {
+    .#{$redesSociales} {
+        color: $color;
+    }
+}
+
+/*MAP - GET */
+
+$estilo: (color: #713e5a , tamTitulo: 3rem, tamTitulo2: 2rem );
+
+h1 {
+    color: map-get($estilo, color);
+    font-size: map-get($estilo, tamTitulo);
+}
+
+h2 {
+    font-size: map-get($estilo, tamTitulo2);
+}
+
+a{
+    font-size: map-get($estilo, tamTitulo2);
+}
+
+.btn {
+    font-size: map-get($estilo, tamTitulo2);
+}
